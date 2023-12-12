@@ -1,0 +1,35 @@
+
+# 자바의 MAP과 똑같
+'''
+* 사전 (Dictionary)
+
+- 사전은 키(key)와 값(value)의 쌍을 저장하는 대용량의 자료구조.
+- 사전은 타 언어에서는 Map이라고도 부르며 연관배열이라고도 부릅니다.
+- 사전을 정의하는 기호는 {}이고, 괄호 안에 데이터를 
+key : value 형태로 나열하여 저장합니다.
+'''
+
+students = {'마루':'강아지', '뵤':'햄쥑이', '쫀떡이':'고양이'}
+print(type(students))
+print(len(students))
+
+'''
+- 사전에 사용되는 key값은 중복값을 가질 수 없고, 변경도 안됩니다.
+- 반면에 value값은 중복을 허용하고, 데이터를 자유롭게 편집할 수도
+있습니다.
+- 사전 내부에 저장된 데이터를 검색할 때는 인덱스 대신
+key를 사용합니다. (시퀀스 자료형이 아닙니다.)
+'''
+
+print('=' * 40)
+
+# value값 꺼내오기
+print(students['마루'])
+print(students['뵤'])
+print(students['쫀떡이'])
+# print(students['보보봉']) # 값이 null이 오면 파이썬은 ERROR가 남 -> 키가 먼저 존재하는지 확인 필요
+
+# in 키워드를 사용하여 key의 존재 유무를 파악할 수 있습니다.
+# 꼭 이 과정 사전에 추천!
+print('마루' in students)
+print('보보봉' not in students)
